@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Unique</title>
+</head>
+
+<body>
+    <script>
+        //to finding a unique element from two array
+        var arr1 = [21, 23, 25, 65, 23];
+        var arr2 = [25, 36, 65, 35, 21];
+        var arr3 = [];
+
+        function unique_arr(arr1, arr2, arr3) {
+            for (var i = 0; i <= arr1.length; i++) {
+                flag = 0;
+                for (var j = 0; j <= arr2.length; j++) {
+                    if (arr1[i] === arr2[j]) {
+                        arr2.splice(j, 1);
+                        j--;
+                        flag = 1;
+                    }
+                }
+                if (flag == 0) {
+                    arr3.push(arr1[i]);
+                }
+            }
+            arr3.push(arr2);
+            return arr3;
+
+        }
+        console.log("Unique elements are: ")
+        console.log(unique_arr(arr1, arr2, arr3).flat());
+    </script>
+</body>
+
+</html>

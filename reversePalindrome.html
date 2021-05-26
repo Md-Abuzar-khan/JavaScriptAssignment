@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse & Palindrome</title>
+</head>
+
+<body>
+    <script>
+        //program to reverse and find palindrome
+        var given_str = "madam";
+
+        function reversePalindromeString(given_str) {
+            var rev = given_str.split('').reverse().join('');
+            document.write("The reverse string is: " + rev + "<br>");
+            if (given_str == rev) {
+                document.write("String is Palindrome");
+            } else {
+                document.write("String is not Palindrome");
+            }
+        }
+        reversePalindromeString(given_str)
+    </script>
+</body>
+
+</html>

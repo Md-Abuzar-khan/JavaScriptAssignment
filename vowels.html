@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels</title>
+</head>
+
+<body>
+    <script>
+        var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        var str_state = "India is my country";
+        var count = 0;
+        for (let char of str_state) {
+            if (vowels.includes(char)) {
+                count++;
+            }
+        }
+        document.write(count);
+    </script>
+</body>
+
+</html>
